@@ -14,10 +14,14 @@
             text-align: center;
             max-width: 400px;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
+            border: 2px solid #000000; /* Black border for pixelated look */
+            border-radius: 10px; /* Slightly rounded corners for a friendly touch */
+            background-color: #d0d0d0; /* Light gray background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+            position: relative; /* Needed for pseudo-element below */
+        }      
+
+
         .imagem {
             margin-bottom: 0px;
         }
@@ -81,12 +85,15 @@
         </div>
         
         <form action="/" method="post">
-            <label for="user_input" style="margin-bottom: 10px;">Número da pokedex:</label>
+            <div style="display: flexbox;">
+                <label for="user_input" style="margin-bottom: 10px; b">Número da pokedex:</label>
+            </div>
+            <br>
             <input class="pokemon-input" type="text" id="user_input" name="user_input">
             <button class='pokemon-button'type="submit" style="font-family: 'Press Start 2P', sans-serif;">Enviar</button>
         </form>
         <div>
-            <h3>Nome: {{ name }}</h1>
+            <h3>{{ name }}</h1>
             <img src="{{ image_url }}" alt="Exemplo de Imagem">
         </div>
     </div>
