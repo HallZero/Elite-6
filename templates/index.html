@@ -19,7 +19,16 @@
             background-color: #f9f9f9;
         }
         .imagem {
-            margin-bottom: 20px;
+            margin-bottom: 0px;
+        }
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('../font/PressStart2P-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Press Start 2P', sans-serif;
         }
     </style>
 </head>
@@ -30,13 +39,14 @@
         </div>
         
         <form action="/" method="post">
-            <label for="user_input">Número da pokedex:</label>
+            <label for="user_input" style="margin-bottom: 10px;">Número da pokedex:</label>
+            <br>
             <input type="text" id="user_input" name="user_input">
-            <button type="submit">Enviar</button>
+            <button type="submit" style="font-family: 'Press Start 2P', sans-serif;">Enviar</button>
         </form>
         
         <div>
-            <h1>Nome: {{ name }}</h1>
+            <h2>Nome: {{ name }}</h1>
             <img src="{{ image_url }}" alt="Exemplo de Imagem">
         </div>
     </div>
