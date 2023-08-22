@@ -92,7 +92,7 @@
         <!-- ... -->
         <div>
             <h3>Nome: {{ data.name }}</h3>
-            <img src="{{ data.image_url }}" alt="Exemplo de Imagem">
+            <img src="{{ data.image | safe }}"  alt="Exemplo de Imagem">
         </div>
         <!-- ... -->
     </div>
