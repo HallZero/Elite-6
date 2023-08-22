@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Página</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .imagem {
+            margin-bottom: 0px;
+        }
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('../font/PressStart2P-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Press Start 2P', sans-serif;
+        }
+        .pokemon-button {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #e82c2c;
+        border: 2px solid #bc1818;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .pokemon-button:hover {
+            background-color: #bc1818;
+            border-color: #8a1010;
+        }
+        .pokemon-input {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 16px;
+        padding: 10px;
+        border: 2px solid #bc1818;
+        border-radius: 5px;
+        background-color: #e82c2c;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        transition: background-color 0.3s, border-color 0.3s;
+        width: 200px;
+        }
+
+        .pokemon-input::placeholder {
+            color: #fff;
+        }
+
+        .pokemon-input:focus {
+            background-color: #bc1818;
+            border-color: #8a1010;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="imagem">
+            <img src="../images/Pokemon-Logo.png" width="300px">
+        </div>
+        
+        <form action="/" method="post">
+            <label for="user_input" style="margin-bottom: 10px;">Número da pokedex:</label>
+            <input class="pokemon-input" type="text" id="user_input" name="user_input">
+            <button class='pokemon-button'type="submit" style="font-family: 'Press Start 2P', sans-serif;">Enviar</button>
+        </form>
+        <div>
+            <h3>Nome: {{ name }}</h1>
+            <img src="{{ image_url }}" alt="Exemplo de Imagem">
+        </div>
+    </div>
+</body>
+</html>
+
