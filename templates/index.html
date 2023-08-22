@@ -80,15 +80,17 @@
             <img src="../images/Pokemon-Logo.png" width="300px">
         </div>
         
-        <form action="/" method="post">
+        <form action="/pokemon" method="post">
             <label for="user_input" style="margin-bottom: 10px;">Número da pokedex:</label>
-            <input class="pokemon-input" type="text" id="user_input" name="user_input">
+            <input class="pokemon-input" type="text" id="pokemon_id" name="pokemon_id">
             <button class='pokemon-button'type="submit" style="font-family: 'Press Start 2P', sans-serif;">Enviar</button>
         </form>
+        <!-- ... -->
         <div>
-            <h3>Nome: {{ name }}</h1>
-            <img src="{{ image_url }}" alt="Exemplo de Imagem">
+            <h3>Nome: {{ data.name }}</h3>
+            <img src="{{ data.image_url }}" alt="Exemplo de Imagem">
         </div>
+        <!-- ... -->
     </div>
 </body>
 </html>
